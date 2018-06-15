@@ -35,16 +35,14 @@
 
 
 /* print_statistics() */ 
-void print_statistics(int median, int mean, int maximum, int minimum);
+void print_statistics(float median, float mean, int maximum, int minimum);
 
 /**
  * @brief This function will print the calculated statistics
  *
- * <Add Extended Description Here>
+ * Print statistics function prints all of the calculated statistics and prints them out
  *
  * @param test[] Array of size "SIZE"
- * @param SIZE   Size of array
-
  *
  * @return VOID
  */
@@ -57,11 +55,8 @@ void sort_array(unsigned char test[]);
 /**
  * @brief This function will sort the array from the largest to the smallest value.
  *
- * <Add Extended Description Here>
  *
  * @param test[] Array of size "SIZE"
- * @param SIZE   Size of array
-
  *
  * @return VOID
  */
@@ -72,11 +67,8 @@ void print_array(unsigned char test[]);
 /**
  * @brief This function will sort the array from the largest to the smallest value.
  *
- * <Add Extended Description Here>
  *
- * @param test[] Array of size "SIZE"
- * @param SIZE   Size of array
-
+ * @param test[] Array of size "SIZE"=
  *
  * @return VOID
  */
@@ -86,11 +78,8 @@ void print_array(unsigned char test[]);
 /**
  * @brief This function will print the calculated statistics
  *
- * <Add Extended Description Here>
  *
  * @param test[] Array of size "SIZE"
- * @param SIZE   Size of array
-
  *
  * @return maximum
  */
@@ -100,40 +89,33 @@ int find_minimum(unsigned char test[]);
 /**
  * @brief This function will print the calculated statistics
  *
- * <Add Extended Description Here>
  *
  * @param test[] Array of size "SIZE"
- * @param SIZE   Size of array
-
  *
  * @return minimum
  */
  
  
- int find_median(unsigned char test[]);
+ float find_median(unsigned char test[]);
 
 /**
  * @brief This function will print the calculated statistics
- *
- * <Add Extended Description Here>
+ 
  *
  * @param test[] Array of size "SIZE"
- * @param SIZE   Size of array
 
  *
  * @return median
  */
 
  
- int find_mean(unsigned char test[]);
+ float find_mean(unsigned char test[]);
 
 /**
  * @brief This function will print the calculated statistics
  *
- * <Add Extended Description Here>
  *
  * @param test[] Array of size "SIZE"
- * @param SIZE   Size of array
 
  *
  * @return mean

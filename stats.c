@@ -27,6 +27,7 @@
                 find_minimum() - Given an array of data and a length, returns the minimum                       [DONE]
                 sort_array() - Given an array of data and a length, sorts the array from largest to smallest.   [DONE]
                         (The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value. )
+     
      * @author Cedric Destin
      * @date 06/06/18
 
@@ -47,7 +48,10 @@ void main() {
                                201,   6,  12,  60,   8,   2,   5,  67,
                                  7,  87, 250, 230,  99,   3, 100,  90};
   unsigned char sorted_array[SIZE];
-  int maximum = 0, minimum = 0, median = 0, mean = 0;
+  // Variables maximum and minimum are declared as int since the array is made of intergers
+  int maximum = 0, minimum = 0;
+  // Variables median, mean are declared as float since the mean and median can be fractional decimal numbers
+  float median = 0, mean = 0;
   
   printf("Embedded Software HW1 \n");
   printf("Unsorted array \n");
@@ -63,7 +67,8 @@ void main() {
   print_statistics(median, mean, maximum, minimum);
  
  }
- 
+
+// @function: function definition to sort array
 void sort_array(unsigned char test[]) {
        int i = 0, j = 0;
        unsigned char temp = 0;
@@ -79,17 +84,21 @@ void sort_array(unsigned char test[]) {
                
        }
 }
-void print_statistics(int median, int mean, int maximum, int minimum) {
-       printf("Median = %i; \t Mean = %i; \t Maximum = %i; \t Minimum = %i\n", median, mean, maximum, minimum);
+
+// @function: function definition to print statistics
+void print_statistics(float median, float mean, int maximum, int minimum) {
+       printf("Median = %f; \t Mean = %f; \t Maximum = %i; \t Minimum = %i\n", median, mean, maximum, minimum);
 }
 
+// @function: function definition to print array
 void print_array(unsigned char test[]) {
        int i = 0;
        for (i = 0; i < SIZE; i++) {
-               printf("%i\t%i\n", test[i], i);
+               printf("%i, ", test[i]);
        }
 }
  
+// @function: function definition to find maximum number stored in array 
 int find_maximum(unsigned char test[]) {
        int i = 0, maximum = 0;
        for(i = 0; i < SIZE; i++) {
@@ -99,6 +108,7 @@ int find_maximum(unsigned char test[]) {
        }
 }
 
+// @function: function definition to find minimum number in array
 int find_minimum(unsigned char test[]) {
        int i = 0, minimum = 0;
        for(i = 0; i < SIZE; i++) {
@@ -109,17 +119,20 @@ int find_minimum(unsigned char test[]) {
        return minimum;
 }
 
-int find_median(unsigned char sorted_array[]) {
+// @function: function definition to find median number in array
+float find_median(unsigned char sorted_array[]) {
        int i = 0, median = 0;
        if (SIZE % 2 == 0) {
-               median = sorted_array[SIZE/2] + sorted_array[SIZE/2 - 1];
+       
+               median = (sorted_array[SIZE/2] + sorted_array[SIZE/2 - 1])/2;
        } else {
-               median = sorted_array[(SIZE - 2) / 2];
+               median = sorted_array[(SIZE / 2)];
        }
        return median;
 }
  
-int find_mean(unsigned char test[]) {
+// @function: function definition to find mean 
+float find_mean(unsigned char test[]) {
        int i = 0, mean = 0;
        for(i = 0; i < SIZE; i++) {
                mean = mean + test[i];
