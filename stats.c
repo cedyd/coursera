@@ -27,6 +27,13 @@
                 find_minimum() - Given an array of data and a length, returns the minimum                       [DONE]
                 sort_array() - Given an array of data and a length, sorts the array from largest to smallest.   [DONE]
                         (The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value. )
+                        
+     * @variable:
+     *	unsigned char test[]: unsigned char array used to store 40 characters
+     *	int maximum	    : value for the maximum number in the array
+     *	int minimum	    : value for the minimum number in the array
+     *	int median	    : value for the median number in the array
+     *	int mean	    : value for the mean number in the array
      
      * @author Cedric Destin
      * @date 06/14/18
