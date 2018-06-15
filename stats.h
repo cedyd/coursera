@@ -27,7 +27,7 @@
 			(The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value. )
  *
  * @author Cedric Destin
- * @date 06/06/18
+ * @date 06/14/18
  *
  */
 #ifndef __STATS_H__
